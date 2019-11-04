@@ -31,14 +31,14 @@ npm install popper.js --save
 # archivo angular.json
 
  # Agrego bootstrap a los estilos CSS, en el array Styles
+ 
 "styles": [
-# Este es el archivo de estilos personalizado.   
  "src/styles.css",
- # Agrego esta otra linea para agregar el archivo de estilos de bootstrap
  "node_modules/bootstrap/dist/css/bootstrap.min.css"
 ],
 
 # En el array de Scripts, agrego estas tres lineas
+
 "scripts": [
   "node_modules/jquery/dist/jquery.slim.min.js",
   "node_modules/popper.js/dist/umd/popper.min.js",
