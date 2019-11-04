@@ -52,3 +52,26 @@ import { PersonasComponent } from './personas/personas.component';
 
 ````
 
+Una vez tengo el componente creado, puedo incluirlo, en el archivo __app.component.html__  para que se muestre en la vista principal de la app.
+
+```php
+# archivo app.component.html
+
+
+<div style="text-align: center;">
+  <h1>
+    {{ title }} app is running!
+
+    # Aca estoy incluyendo el componente
+    <app-personas></app-personas>
+  </h1>
+
+</div>
+
+````
+
+De esta manera entonces es posible agregar componentes dentro de otros.   
+
+
+
+
