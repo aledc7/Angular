@@ -162,8 +162,24 @@ Entonces, los elementos de un componente son:
   - La plantilla HTML a utilizar
   - El archivo de estilos CSS que se vaya a utilizar
 
-Con esto completamos la intro.
+## Plugins útiles para instalar en Vs Code cuando se vaya a trabajar con Angular:   
 
+
+### Este plugin agregará automaticamente el codigo necesario para hacer __imports__, crear __decoradores__, crear __clases__ y otras cosas. 
+
+![plugin para angular](https://github.com/aledc7/Angular/blob/master/resources/plugin-vscode.png?raw=true)
+
+
+### Este otro Plugin de gran utilidad
+
+![Angular Language Service](https://github.com/aledc7/Angular/blob/master/resources/angularLanguageService.png?raw=true)
+
+### Este es para trabajar con Typescript
+![Angular Typescript](https://github.com/aledc7/Angular/blob/master/resources/angular%20typescript.png?raw=true)
+
+
+### Este facilita el agregado de clases y etiquetas de Bootstrap.
+![Bootstrap](https://github.com/aledc7/Angular/blob/master/resources/bootstrap.png?raw=true)  
 
 
 
