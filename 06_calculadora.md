@@ -19,6 +19,8 @@ ng generate component calculadora
 
 
 ```js
+# archivo app.component.html
+
 <div style="text-align: center;">
     
     // referencio al componente recien creado
@@ -69,6 +71,8 @@ ng generate component calculadora
 
 4. Luego el contenido de la lógica de la calculadora, en el archivo de Typescript:
 ```js
+# archivo calculadora.component.ts
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -103,8 +107,13 @@ export class CalculadoraComponent implements OnInit {
   }
 
 }
-
 ````
+
+El resultado debería ser el siguiente:   
+
+![Calculadora](https://github.com/aledc7/Angular/blob/master/resources/calculadora.png?raw=true)
+
+
 
 
 
