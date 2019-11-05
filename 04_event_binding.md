@@ -42,7 +42,9 @@ Esta propiedad estará definida en el archovo typescript, y tendrá un método q
 </div>
 
 ````
-2.  Luego en el achivo typescript definimos la propiedad llamada __agregarPersonaStatus__ y la iniciaremos con un mensaje de texto inicial "No se ha agregado ninguna persona"
+2.  Luego en el achivo typescript definimos la propiedad llamada __agregarPersonaStatus__ y la iniciaremos con un mensaje de texto inicial "No se ha agregado ninguna persona".
+
+Observese que la propiedad a bindear, debe estar dentro de un array [ ]
 
 Seguidamente creamos un método que cambiará el texto asignado a esta propiedad, para finalmente asignar este método al boton del html.
 
