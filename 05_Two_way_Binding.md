@@ -53,33 +53,36 @@ Esto significa que por una parte se responderá a un evento, y por otro lado se 
 
 Para combinar estas dos propiedades en Angular, se hace uso de __ngModel__:
 
+Este es el contenido del archivo html:
 
 ```js
+## archivo personas.component.html
 <div class="container">
   <div class="row">
     <div class="col">
-        <h1>Angular Componentes</h1>
-        <h2>Probando segundo</h2>
-        <h3>Tercero</h3>
+
 
         <label>Nombre Persona</label>
-        <br>
+   
         <input type="text"
         class="form-comtrol"
+        
+        # Aca hago el binding usando ngModel dentro de un array y dentro de paréntesos
+        
         [(ngModel)]="tituloPersona">
 
-        <br>
+    
         {{tituloPersona}}
-        <br>
+
         <h1>Lustado de Personas</h1>
 
 
         Nombre: {{nombrePersona}}
-        <br>
+
         Apellido: {{apellidoPersona}}
-        <br>
+
         Edad: {{edad - 6}}
-        <br>
+
         <button class="btn btn-primary" [disabled]=!agregarPersona (click)="onCrearPersona()">Agregar Persona</button>
         <p>{{ agregarPersonaStatus }}</p>
     </div>
@@ -87,6 +90,41 @@ Para combinar estas dos propiedades en Angular, se hace uso de __ngModel__:
 </div>
 
 ````
+Luego en el componente Typescript declaro la propiedad que indiqué para bindear en el ngModel, y le asigno algun dato, de manera de enviar este dato a la plantilla:
+
+```js
+# archivo personas.component.ts
+
+
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-personas',
+  templateUrl: './personas.component.html',
+  styleUrls: ['./personas.component.css']
+})
+export class PersonasComponent implements OnInit {
+
+
+
+// Esta es la propiedad bindeada en el html, le asigno una cadena de texto que será enviada al html
+
+agregarPersonaStatus = "No se ha agregado ninguna persona";
+
+
+
+   ngOnInit(){}
+
+
+}
+
+````
+
+De esta manera se ha logrado enviar informacion desde el HTML hacia el componente Typescript, a traves del Input, y por otro lado hemos enviado el texto asignado en el componente Typescript hacia la plantolla HTML.
+
+
+
+
 
 
 
