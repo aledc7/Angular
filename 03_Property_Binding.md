@@ -31,8 +31,8 @@ Veamoslo en el código:
   <div class="row">
     <div class="col">
     
-        # Agrego un boton, y le pongo la propiedad disabled dentro de u array
-        # y la igualo a la propiedad 'agregarPera', de esta manera queda bindeada.
+        ## Agrego un boton, y le pongo la propiedad disabled dentro de u array
+        ## y la igualo a la propiedad 'agregarPera', de esta manera queda bindeada.
 
         <button class="btn btn-primary" [disabled]=!agregarPersona>Agregar Persona</button>
         
@@ -45,7 +45,7 @@ Veamoslo en el código:
 Esta propiedar es la que está bindeada a la propiedad 'disabled' del boton... de tal manera que cuando esta propiedad del compinente typescript cambie, también lo hará la propiedad del boton.
 
 ```js
-# archivo personas.component.ts
+// archivo personas.component.ts
 
 import { Component, OnInit } from '@angular/core';
 
@@ -58,7 +58,7 @@ export class PersonasComponent implements OnInit {
 
 
 
-# Esta es la propiedad booleana que está bindeada con el boton
+// Esta es la propiedad booleana que está bindeada con el boton
   agregarPersona=false;
 
   nombrePersona: string = "Ale";
@@ -66,7 +66,7 @@ export class PersonasComponent implements OnInit {
   edad: number = 40;
 
 
-# Esta función, luego de 3 segundos, cámbia la propiedad  agregarPersona y la asigna a true. 
+// Esta función, luego de 3 segundos, cámbia la propiedad  agregarPersona y la asigna a true. 
 
   constructor() {
     setTimeout(
