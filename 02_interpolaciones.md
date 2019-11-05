@@ -86,6 +86,9 @@ Apellido: {{ apellidoPersona }}
 Edad: {{ getEdad() }}
 ````
 
+Esto es todo lo que se necesita saber acerca de las interpolaciones.
+
+
 
 
 
