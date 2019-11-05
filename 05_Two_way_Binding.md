@@ -67,7 +67,7 @@ Este es el contenido del archivo html:
         <input type="text"
         class="form-comtrol"
         
-        # Aca hago el binding usando ngModel dentro de un array y dentro de paréntesos
+        # Aca dentro del tag de input, hago el binding usando ngModel dentro de un array y dentro de paréntesos
         
         [(ngModel)]="tituloPersona">
 
