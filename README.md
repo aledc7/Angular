@@ -36,6 +36,16 @@ ng serve -o
 la opción -o es para que se abra luego de ejecutar el server (open) .
 
 
+# Clonando un proyecto existente
+
+En el caso de que se quiera correr un proyecto existente en una nueva maquina, es necesario generar las dependencias, corriendo el siguiente comando:
+
+```php
+npm install --dev
+````
+
+
+
 
 # Como es que se levanta una app en Angular
 
