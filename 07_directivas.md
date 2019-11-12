@@ -17,6 +17,8 @@
 Aunque existen muchas mas, estas son las principales directivas en Angular, comencemos  usando __NgIf__
 
 
+
+## ngIF
 1. Tenemos un parrafo que queremos mostrar ante una condición específica
 
 ```js
@@ -34,6 +36,9 @@ Aunque existen muchas mas, estas son las principales directivas en Angular, come
 
 Observemos arriba, dentro de la etiqueta __P__ se coloca __*ngIF__ igualado a la propiedad __estadoresultado__.   
 Luego punto y coma y un __else__ con otra propiedad, __else_resultado__.
+
+
+## ngElse
 
 Primeramente la propiedad __estado__ deberá estar declarada en el componente typescript, y podrá ser unicamente de tipo booleano. 
  En caso de que sea True, el parrafo se mostrará, en caso de que sea false, se mostrará el template que tenga como id, la propiedad __else_resultado__  .
