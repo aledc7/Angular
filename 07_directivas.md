@@ -91,6 +91,73 @@ export class CalculadoraComponent implements OnInit {
 }
 ````
 
+## ngFor
+
+
+La sintaxis para un __ngFor__ es la siguiente:   
+
+__*ngFor="let persona of personas; let i = index"__   
+
+
+Primeramente se declara __*ngFor=__  luego se crea una variable __persona__ que será el alias, luego se indica el arreglo que se debe iterar, en este caso __personas__,  luego se declara otra variable __i__ que será el índice.   
+
+Luego dentro de este div, se pone lo que queremos que itere, en este ejemplo queremos que nos itere los nombres y apellido de cada una de las personas.   
+
+
+```php
+<div class="row">
+    <div class="col-xs-12">
+      <div *ngFor="let persona of personas; let i = index">
+        {{i +1}}: {{persona.nombre}} {{persona.apellido}}
+      </div>
+    </div>
+  </div>
+````
+
+
+El array __personas__ se encuentra declarado en el archivo de Typescript, correspondiente al componente en donde hayamos declarado el __ngFor__, y tiene el siguiente aspecto:
+
+```php
+# archivo app.components.ts
+
+import { Component } from '@angular/core';
+import { Persona } from './persona.models';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Pruebas de Angular';
+
+# Este es el arreglo que se itera
+  personas: Persona[] = [
+    new Persona("Ale", "Dc"),
+    new Persona("Pablo", "Salut"),
+    new Persona("Abel", "Ranni"),
+    new Persona("Nahuel", "Sarlangue")
+    ]
+    
+    
+  nombreInput:string;
+  apellidoInput:string;
+
+  onAgregarPersona(){
+    let persona1 = new Persona(this.nombreInput, this.apellidoInput);
+    this.personas.push(persona1);
+  }
+
+
+}
+
+
+````
+
+
+
+
+
 
 
 
