@@ -140,7 +140,7 @@ Luego, como comenté mas arriba, en esta etiqueta que incluye al hijo, es necesa
 Luego solo resta indicar que vamos a pasar la __persona__ y el __indice__ desde la clase padre hacia el hijo... esto se hace con el decorador __@__   
 
 
-````
+```php
 # Archivo Hijo persona.component.ts
 
 // se agregó 'input' automaticamente dentro del objeto de '@angular/core'
