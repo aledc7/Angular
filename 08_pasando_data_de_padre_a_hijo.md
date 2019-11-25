@@ -135,15 +135,57 @@ Luego, como comenté mas arriba, en esta etiqueta que incluye al hijo, es necesa
 
 ````
 
-Observese arriba que la etiqueta __<app-persona/>__ que usamos para incluír el componente hijo dentro del padre, es la etiqueta definida en el selector del componente hijo:
-```php
-# archivo hijo.ts
 
-selector: 'app-persona',
+
+Luego solo resta indicar que vamos a pasar la __persona__ y el __indice__ desde la clase padre hacia el hijo... esto se hace con el decorador __@__   
+
+
+````
+# Archivo Hijo persona.component.ts
+
+// se agregó 'input' automaticamente dentro del objeto de '@angular/core'
+import { Component, OnInit, Input } from '@angular/core';
+import { Persona } from '../persona.models';
+
+@Component({
+  selector: 'app-persona',
+  templateUrl: './persona.component.html',
+  styleUrls: ['./persona.component.css']
+})
+export class PersonaComponent implements OnInit {
+
+  # aca indico que voy a pasar información desde la clase Padre, en este caso la clase Padre es app.component
+  # primero se pone el decorador @input()  y luego la variable que se quera recibir, en este caso 'persona: Persona'
+  
+  @Input() persona: Persona;
+  @Input() index: number;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
 ````
 
 
-Luego en el componente hijo
+Así quedaría entonces el componente hijo:   
+
+# archivo persona.component.html
+
+```php
+<div class="row">
+  <div class="col-xs-12">
+    <div>
+      {{index +1}}: {{persona.nombre}} {{persona.apellido}}
+    </div>
+  </div>
+</div>
+
+````
+
+
+
 
 
 
