@@ -111,12 +111,43 @@ UPDATE src/app/app.module.ts (911 bytes)
 ```` 
 
 
-Aquí se podrá observar en el editor que ya no se tiene acceso a __personas__ que es el array que se quiere iterar en el *ngFor. Este array __personas__  se encuentra definido en el archivo __app.component.ts__ tal como se mostró mas arriba.
+Aquí se podrá observar en el editor que ya NO se tiene acceso a __personas__ que es el array que se quiere iterar en el *ngFor. Este array __personas__  se encuentra definido en el archivo __app.component.ts__ tal como se mostró mas arriba.
+
+Este __ngFor__ hay que ejecutarlo dentro del componente Padre, como veremos a continuacion
 
 
-3. Luego, se debe incluir el componente hijo dentro del padre, incluyendo la etiqueta del nuevo componente __<app-persona /></app-persona/>__  en el componente Padre.
+3. Luego, se debe incluir el componente hijo dentro del html del componente padre.  
+Esto se logra incluyendo la etiqueta del nuevo componente __<app-persona /></app-persona/>__  en el html del componente Padre.
  
-Luego, en esta etiqueta que incluye al hijo, es necesario  agregarle el componente __*ngFor__ se debe ej
+Luego, como comenté mas arriba, en esta etiqueta que incluye al hijo, es necesario  pasar el componente __*ngFor__  del componete hijo, hacia el componente padre,   Así es como quedaría :   
+
+
+```php
+#archivo app.component.html 
+
+
+# Este componente queremos que se ejecute la cantidad de veces que tengamos en el arreglo de personas.   
+<app-persona
+*ngFor="let personaElemento of personas; let i = index"
+[persona] = "personaElemento"
+[index] = "i"
+></app-persona>
+
+````
+
+Observese arriba que la etiqueta __<app-persona/>__ que usamos para incluír el componente hijo dentro del padre, es la etiqueta definida en el selector del componente hijo:
+```php
+# archivo hijo.ts
+
+selector: 'app-persona',
+````
+
+
+Luego en el componente hijo
+
+
+
+
 
 
 
